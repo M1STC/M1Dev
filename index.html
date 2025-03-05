@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            filter: blur(5px);
+            object-fit: cover;
+        }
+
+        .content {
+            position: relative;
+            color: white;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .bio-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Check out my latest work and projects below!</p>
+
+        <div class="video-grid">
+            <div>
+                <iframe src="https://www.youtube.com/embed/GsnoaeySgm8" frameborder="0" allowfullscreen></iframe>
+                <p>A Street racing script, previously made for QBCore, but has now been updated and moved over onto ESX.</p>
+            </div>
+
+            <div>
+                <iframe src="https://www.youtube.com/embed/n5e19oYr-gE"frameborder="0" allowfullscreen></iframe>
+                <p>A firing range script. A small minigame which is in process of being updated/ having more features added.</p>
+            </div>
+
+            <div>
+                <iframe src="https://www.youtube.com/embed/s8iv_8WHiec" frameborder="0" allowfullscreen></iframe>
+                <p>A headshot modifier script For QBCore.</p>
+            </div>
+
+            <div>
+                <iframe src="https://www.youtube.com/embed/BoIcGANXC0g" frameborder="0" allowfullscreen></iframe>
+                <p>Another script for a random car crash event.</p>
+            </div>
+        </div>
+
+        <div class="bio-section">
+            <h2>About Me</h2>
+            <p>Hi, I am an experienced developer
+
+                Coding languages : Lua, HTML, CSS, JavaScript, and C#, creating custom scripts, and debugging/maintaining servers.
+
+                I am dedicated, I like to be complete and thorough with tasks and am available and easy to communicate with.
+
+                Frameworks: ESX, QB-Core, Standalone.
+
+                Feel free to get in contact and ask questions.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
